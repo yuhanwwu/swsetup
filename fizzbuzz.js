@@ -1,5 +1,7 @@
-console.log("hi");
-for (i = 1; i <= 255; i++) {
+const readline = require('readline-sync');
+console.log("enter top bound: ");
+const count = readline.prompt();
+for (i = 1; i <= count; i++) {
     let strf = new Array();
     let strb = new Array();
     if (i % 3 == 0) {
