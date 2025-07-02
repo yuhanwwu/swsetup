@@ -1,21 +1,26 @@
 console.log("hi");
-for (i = 1; i < 100; i++) {
-    let str = "";
-    if (i % 5 == 0 && i%3 == 0) {
-        str = "fizzbuzz";
+for (i = 1; i <= 100; i++) {
+    let strf = "";
+    let strb = "";
+    if (i % 3 == 0) {
+        strf = "fizz";
     }
-    else if (i % 5 == 0) {
-        str = "buzz";
-    }
-    else if (i % 3 == 0) {
-        str = "fizz";
+    if (i % 5 == 0) {
+        strb = "buzz";
     }
     if (i%7 == 0) {
-        str = str + "bang";
+        strb = strb + "bang";
     }
     if (i%11 == 0) {
-        str = "bong";
+        strf = "";
+        strb = "bong";
     }
+    if (i%13 == 0){
+        strf = strf + "fezz";
+
+    }
+    let str = "";
+    str = strf + strb;
     if (str == ""){
         str = i;
     }
