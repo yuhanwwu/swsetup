@@ -1,15 +1,20 @@
 console.log("hi");
-for (i = 0; i < 100; i++) {
+for (i = 1; i < 100; i++) {
+    let str = "";
     if (i % 5 == 0 && i%3 == 0) {
-        console.log("fizzbuzz");
+        str = "fizzbuzz";
     }
     else if (i % 5 == 0) {
-        console.log("buzz");
+        str = "buzz";
     }
     else if (i % 3 == 0) {
-        console.log("fizz");
+        str = "fizz";
     }
-    else {
-        console.log(i);
+    if (i%7 == 0) {
+        str = str + "bang";
     }
+    if (str == ""){
+        str = i;
+    }
+    console.log(str);
 }
