@@ -16,6 +16,9 @@ class Bot {
         // rounds = gamestate[rounds].map((round) => round[p2]);
         const rand = newrandom();
         if (rand > 0.96) {
+            if (dynamite == 0) {
+                return this.makeMove(gamestate);
+            }
             gamestate[dynamite] = dynamite - 1;
             return 'D';
         } else if (rand > 0.92){
