@@ -13,6 +13,9 @@ for (i = 1; i < 100; i++) {
     if (i%7 == 0) {
         str = str + "bang";
     }
+    if (i%11 == 0) {
+        str = "bong";
+    }
     if (str == ""){
         str = i;
     }
