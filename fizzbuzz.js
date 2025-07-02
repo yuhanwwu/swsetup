@@ -1,28 +1,31 @@
 console.log("hi");
-for (i = 1; i <= 100; i++) {
-    let strf = "";
-    let strb = "";
+for (i = 1; i <= 255; i++) {
+    let strf = new Array();
+    let strb = new Array();
     if (i % 3 == 0) {
-        strf = "fizz";
+        strf.push("fizz");
     }
     if (i % 5 == 0) {
-        strb = "buzz";
+        strb.push("buzz");
     }
     if (i%7 == 0) {
-        strb = strb + "bang";
+        strb.push("bang");
     }
     if (i%11 == 0) {
-        strf = "";
-        strb = "bong";
+        strf = [];
+        strb = ["bong"];
     }
     if (i%13 == 0){
-        strf = strf + "fezz";
+        strf.push("fezz");
 
     }
-    let str = "";
-    str = strf + strb;
-    if (str == ""){
-        str = i;
+    let str = new Array();
+    str = strf.concat(strb);
+    if (i%17 == 0) {
+        str.reverse();
     }
-    console.log(str);
+    if (str.length == 0){
+        str = [i];
+    }
+    console.log(str.reduce((acc, cur) => acc + cur, ""));
 }
